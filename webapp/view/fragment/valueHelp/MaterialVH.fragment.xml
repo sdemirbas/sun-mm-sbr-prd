@@ -1,0 +1,27 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable" xmlns:t="sap.ui.table">
+	<Dialog>
+		<smartFilterBar:SmartFilterBar id="smartFilterBar" useDateRangeType="true" showFilterConfiguration="false"
+			entitySet="VhReferenceMaterialSet" useToolbar="false" search="handleSearchRequests" persistencyKey="SmartFilterPKey">
+			<smartFilterBar:controlConfiguration groupName="Search Parameters">
+				<smartFilterBar:ControlConfiguration key="Matnr" visibleInAdvancedArea="true" preventInitialDataFetchInValueHelpDialog="false"/>
+				<smartFilterBar:ControlConfiguration key="Maktx" visibleInAdvancedArea="true" preventInitialDataFetchInValueHelpDialog="false"/>
+				<smartFilterBar:ControlConfiguration key="Mtart" visibleInAdvancedArea="true" preventInitialDataFetchInValueHelpDialog="false"/>
+				<smartFilterBar:ControlConfiguration key="Zztanim" visibleInAdvancedArea="true" preventInitialDataFetchInValueHelpDialog="false"/>
+			</smartFilterBar:controlConfiguration>
+		</smartFilterBar:SmartFilterBar>
+		<smartTable:SmartTable entitySet="VhReferenceMaterialSet" id="smartFilterTable" smartFilterId="smartFilterBar" useVariantManagement="false"
+			tableType="ResponsiveTable" useTablePersonalisation="true" showRowCount="true" enableAutoBinding="true"
+			class="sapUiResponsiveContentPadding">
+			<Table id="smartFilterMTable" selectionChange="onSelectionMaterialSelectDialogClose" growing="true" growingThreshold="200"
+				growingScrollToLoad="true">
+				<ColumnListItem type="Active" press="onSelectionMaterialSelectDialogClose">
+					<cells></cells>
+				</ColumnListItem>
+			</Table>
+		</smartTable:SmartTable>
+		<beginButton>
+			<Button text="{i18n>button.Close}" press="onCloseReferenceMaterialVH" type="Reject"/>
+		</beginButton>
+	</Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,221 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZMM_005_MAMUL_SRV" xml:lang="tr" sap:schema-version="1">
+			<EntityType Name="VhApreSpecialProcess" sap:content-version="1">
+				<Key><PropertyRef Name="Zzapozis"/></Key><Property Name="Zzapozis" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Apre Özel İşlem"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzapozist" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Apre Özel İşlem Tnm"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhDyeCenterSpecialProcess" sap:content-version="1">
+				<Key><PropertyRef Name="Boyaisl"/></Key><Property Name="Boyaisl" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Boya Özel İşlem"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Boyaislt" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Boya Özel İşlem Tanm"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhDyeOperation" sap:content-version="1">
+				<Key><PropertyRef Name="Zzboyaopr"/></Key><Property Name="Zzboyaopr" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Operasyon Kısa Kodu"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzboyaoprt" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Tanım" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhHambez" sap:content-version="1">
+				<Key><PropertyRef Name="Matnr"/></Key><Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Malzeme" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/><Property Name="Maktx" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Tanım" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/><Property Name="Mtart" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Malzeme türü" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/><Property Name="Zzseri" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Seri" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/><Property Name="Zzorgutip" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Örgü Tip" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/><Property Name="Zzfein" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Fein" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/><Property Name="Zznamekod" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="NameKod" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/><Property Name="Zzgramaj" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Gramaj"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/><Property Name="Zzen" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="En" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/><Property Name="Zzkelyafgrup" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Kumaş Elyaf Grup"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/><Property Name="Zzfasongrup" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Fason Grup"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/><Property Name="Zzorgufiyat" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:label="Örgü Fiyat"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/><Property Name="ZzorgufiyatBirim" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Para birimi"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:semantics="currency-code"/><Property Name="Zzrefmatnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Referans Malzeme"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/><Property Name="Zzpus" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Pus" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/></EntityType>
+			<EntityType Name="VhClothDyeType" sap:content-version="1">
+				<Key><PropertyRef Name="Kboyatip"/></Key><Property Name="Kboyatip" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Kumaş Boya Tipi"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Kboyatipt" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Tanım" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="Apre" sap:content-version="1">
+				<Key><PropertyRef Name="Sequnr"/></Key><Property Name="Tlpid" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Talep Numarası"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Sequnr" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Sıralama no." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Malzeme" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzapozis" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Apre Özel İşlem"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzapozist" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Apre Özel İşlem Tnm"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="Dye" sap:content-version="1">
+				<Key><PropertyRef Name="Sequnr"/></Key><Property Name="Tlpid" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Talep Numarası"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Sequnr" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Sıralama no." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Malzeme" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Boyaisl" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Boya Özel İşlem"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Boyaislt" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Boya Özel İşlem Tanm"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="DyeAndPrint" sap:content-version="1">
+				<Key><PropertyRef Name="Sequnr"/></Key><Property Name="Tlpid" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Talep Numarası"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Sequnr" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Sıralama no." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Malzeme" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzboyaopt" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Operasyon Tipi"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzboyaopr" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Operasyon Kısa Kodu"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzyarimamulsayisi" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Yarı Mamul Sayısı"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzffiyat" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="ZzffiyatBirim"
+					sap:label="Fason Fiyat" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ZzffiyatBirim" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Para birimi"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/><Property Name="Zzboyaoptt" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Tanım" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzboyaoprt" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Tanım" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="Mamul" sap:content-version="1">
+				<Key><PropertyRef Name="HambezKodu"/></Key><Property Name="HambezKodu" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Malzeme" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Kboyatip" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Kumaş Boya Tipi"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzkontrol" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Kontrol" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzkartela" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Kartela" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzok" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Ok" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Zztest" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Test" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Remark" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Remark" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Process" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Process" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Uyari" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Uyarı" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Bilgi" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Bilgi" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Aciklama" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Açıklama" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Fiyat" Type="Edm.Decimal" Nullable="false" Precision="12" Scale="3" sap:unicode="false" sap:label="Fiyat"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="FiyatPb" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Para birimi" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/></EntityType>
+			<EntityType Name="MamulHeader" sap:content-version="1">
+				<Key><PropertyRef Name="HambezKodu"/></Key><Property Name="HambezKodu" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Malzeme" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Talepid" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Talep Numarası"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><NavigationProperty Name="ToMamul" Relationship="ZMM_005_MAMUL_SRV.MamulHeaderToMamul" FromRole="FromRole_MamulHeaderToMamul"
+					ToRole="ToRole_MamulHeaderToMamul"/><NavigationProperty Name="ToApre" Relationship="ZMM_005_MAMUL_SRV.MamulHeaderToApre" FromRole="FromRole_MamulHeaderToApre"
+					ToRole="ToRole_MamulHeaderToApre"/><NavigationProperty Name="ToDye" Relationship="ZMM_005_MAMUL_SRV.MamulHeaderToDye" FromRole="FromRole_MamulHeaderToDye"
+					ToRole="ToRole_MamulHeaderToDye"/><NavigationProperty Name="ToDyeAndPrint" Relationship="ZMM_005_MAMUL_SRV.MamulHeaderToDyeAndPrint"
+					FromRole="FromRole_MamulHeaderToDyeAndPrint" ToRole="ToRole_MamulHeaderToDyeAndPrint"/></EntityType>
+			<EntityType Name="MamulJakarHeader" sap:content-version="1">
+				<Key><PropertyRef Name="HambezKodu"/></Key><Property Name="HambezKodu" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Malzeme" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Talepid" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Talep Numarası"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><NavigationProperty Name="to_MamulJakar" Relationship="ZMM_005_MAMUL_SRV.MamulJakarHeaderToMamulJakar"
+					FromRole="FromRole_MamulJakarHeaderToMamulJakar" ToRole="ToRole_MamulJakarHeaderToMamulJakar"/><NavigationProperty Name="to_ApreJakar" Relationship="ZMM_005_MAMUL_SRV.MamulJakarHeaderToApreJakar"
+					FromRole="FromRole_MamulJakarHeaderToApreJakar" ToRole="ToRole_MamulJakarHeaderToApreJakar"/><NavigationProperty Name="to_DyeJakar" Relationship="ZMM_005_MAMUL_SRV.MamulJakarHeaderToDyeJakar"
+					FromRole="FromRole_MamulJakarHeaderToDyeJakar" ToRole="ToRole_MamulJakarHeaderToDyeJakar"/><NavigationProperty Name="to_DyeAndPrintJakar" Relationship="ZMM_005_MAMUL_SRV.MamulJakarHeaderToDyeJAndPrintJakar"
+					FromRole="FromRole_MamulJakarHeaderToDyeJAndPrintJakar" ToRole="ToRole_MamulJakarHeaderToDyeJAndPrintJakar"/></EntityType>
+			<EntityType Name="MamulJakar" sap:content-version="1">
+				<Key><PropertyRef Name="HambezKodu"/></Key><Property Name="HambezKodu" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Malzeme" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Kboyatip" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Kumaş Boya Tipi"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzkontrol" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Kontrol" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzkartela" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Kartela" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzok" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Ok" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Zztest" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Test" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Remark" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Remark" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Process" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Process" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Uyari" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Uyarı" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Bilgi" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Bilgi" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Aciklama" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Açıklama" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Fiyat" Type="Edm.Decimal" Nullable="false" Precision="12" Scale="3" sap:unicode="false" sap:unit="FiyatPb" sap:label="Fiyat"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="FiyatPb" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Para birimi" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/></EntityType>
+			<EntityType Name="ApreJakar" sap:content-version="1">
+				<Key><PropertyRef Name="Sequnr"/></Key><Property Name="Tlpid" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Talep Numarası"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Sequnr" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Sıralama no." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Malzeme" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzapozis" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Apre Özel İşlem"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzapozist" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Apre Özel İşlem Tnm"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="DyeJakar" sap:content-version="1">
+				<Key><PropertyRef Name="Sequnr"/></Key><Property Name="Tlpid" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Talep Numarası"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Sequnr" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Sıralama no." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Malzeme" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Boyaisl" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Boya Özel İşlem"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Boyaislt" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Boya Özel İşlem Tanm"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="DyeAndPrintJakar" sap:content-version="1">
+				<Key><PropertyRef Name="Sequnr"/></Key><Property Name="Tlpid" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Talep Numarası"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Sequnr" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Sıralama no." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Malzeme" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzboyaopt" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Operasyon Tipi"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzboyaopr" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Operasyon Kısa Kodu"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzyarimamulsayisi" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Yarı Mamul Sayısı"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzffiyat" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="ZzffiyatBirim"
+					sap:label="Fason Fiyat" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ZzffiyatBirim" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Para birimi"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/><Property Name="Zzboyaoptt" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Tanım" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzboyaoprt" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Tanım" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhReferenceMaterial" sap:content-version="1">
+				<Key><PropertyRef Name="Matnr"/></Key><Property Name="Mtart" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Malzeme türü" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Mtbez" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Mlz.türü tanımı"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Malzeme" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Maktx" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Tanım" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zztanim" Type="Edm.String" Nullable="false" MaxLength="150" sap:unicode="false" sap:label="Malzeme Tanımı 2"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="MamulFasonHeader" sap:content-version="1">
+				<Key><PropertyRef Name="Refmatnr"/></Key><Property Name="Refmatnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Referans Malzeme"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Talepid" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Talep Numarası"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><NavigationProperty Name="to_MamulFason" Relationship="ZMM_005_MAMUL_SRV.MamulFasonHeaderToMamulFason"
+					FromRole="FromRole_MamulFasonHeaderToMamulFason" ToRole="ToRole_MamulFasonHeaderToMamulFason"/><NavigationProperty Name="to_DyeAndPrintFason" Relationship="ZMM_005_MAMUL_SRV.MamulFasonHeaderToDyeAndPrintFason"
+					FromRole="FromRole_MamulFasonHeaderToDyeAndPrintFason" ToRole="ToRole_MamulFasonHeaderToDyeAndPrintFason"/></EntityType>
+			<EntityType Name="MamulFason" sap:content-version="1">
+				<Key><PropertyRef Name="Refmatnr"/></Key><Property Name="Refmatnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Referans Malzeme"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Refmatnrt" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Tanım" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Refmatnrt2" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Tanım" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzboyaopr" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Operasyon Kısa Kodu"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzboyaopt" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Operasyon Tipi"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="DyeAndPrintFason" sap:content-version="1">
+				<Key><PropertyRef Name="Sequnr"/></Key><Property Name="Tlpid" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Talep Numarası"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Sequnr" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Sıralama no." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Malzeme" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzboyaopt" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Operasyon Tipi"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzboyaopr" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Operasyon Kısa Kodu"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzyarimamulsayisi" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Yarı Mamul Sayısı"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzffiyat" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:unit="ZzffiyatBirim"
+					sap:label="Fason Fiyat" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ZzffiyatBirim" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Para birimi"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/><Property Name="Zzboyaoptt" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Tanım" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzboyaoprt" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Tanım" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<Association Name="MamulJakarHeaderToMamulJakar" sap:content-version="1"><End Type="ZMM_005_MAMUL_SRV.MamulJakarHeader" Multiplicity="1" Role="FromRole_MamulJakarHeaderToMamulJakar"/><End Type="ZMM_005_MAMUL_SRV.MamulJakar" Multiplicity="1" Role="ToRole_MamulJakarHeaderToMamulJakar"/></Association>
+			<Association Name="MamulJakarHeaderToApreJakar" sap:content-version="1"><End Type="ZMM_005_MAMUL_SRV.MamulJakarHeader" Multiplicity="*" Role="FromRole_MamulJakarHeaderToApreJakar"/><End Type="ZMM_005_MAMUL_SRV.ApreJakar" Multiplicity="*" Role="ToRole_MamulJakarHeaderToApreJakar"/></Association>
+			<Association Name="MamulJakarHeaderToDyeJakar" sap:content-version="1"><End Type="ZMM_005_MAMUL_SRV.MamulJakarHeader" Multiplicity="*" Role="FromRole_MamulJakarHeaderToDyeJakar"/><End Type="ZMM_005_MAMUL_SRV.DyeJakar" Multiplicity="*" Role="ToRole_MamulJakarHeaderToDyeJakar"/></Association>
+			<Association Name="MamulJakarHeaderToDyeJAndPrintJakar" sap:content-version="1"><End Type="ZMM_005_MAMUL_SRV.MamulJakarHeader" Multiplicity="*" Role="FromRole_MamulJakarHeaderToDyeJAndPrintJakar"/><End Type="ZMM_005_MAMUL_SRV.DyeAndPrintJakar" Multiplicity="*" Role="ToRole_MamulJakarHeaderToDyeJAndPrintJakar"/></Association>
+			<Association Name="MamulHeaderToApre" sap:content-version="1"><End Type="ZMM_005_MAMUL_SRV.MamulHeader" Multiplicity="*" Role="FromRole_MamulHeaderToApre"/><End Type="ZMM_005_MAMUL_SRV.Apre" Multiplicity="*" Role="ToRole_MamulHeaderToApre"/></Association>
+			<Association Name="MamulHeaderToDye" sap:content-version="1"><End Type="ZMM_005_MAMUL_SRV.MamulHeader" Multiplicity="*" Role="FromRole_MamulHeaderToDye"/><End Type="ZMM_005_MAMUL_SRV.Dye" Multiplicity="*" Role="ToRole_MamulHeaderToDye"/></Association>
+			<Association Name="MamulHeaderToDyeAndPrint" sap:content-version="1"><End Type="ZMM_005_MAMUL_SRV.MamulHeader" Multiplicity="*" Role="FromRole_MamulHeaderToDyeAndPrint"/><End Type="ZMM_005_MAMUL_SRV.DyeAndPrint" Multiplicity="*" Role="ToRole_MamulHeaderToDyeAndPrint"/></Association>
+			<Association Name="MamulHeaderToMamul" sap:content-version="1"><End Type="ZMM_005_MAMUL_SRV.MamulHeader" Multiplicity="1" Role="FromRole_MamulHeaderToMamul"/><End Type="ZMM_005_MAMUL_SRV.Mamul" Multiplicity="1" Role="ToRole_MamulHeaderToMamul"/></Association>
+			<Association Name="MamulFasonHeaderToMamulFason" sap:content-version="1"><End Type="ZMM_005_MAMUL_SRV.MamulFasonHeader" Multiplicity="1" Role="FromRole_MamulFasonHeaderToMamulFason"/><End Type="ZMM_005_MAMUL_SRV.MamulFason" Multiplicity="1" Role="ToRole_MamulFasonHeaderToMamulFason"/></Association>
+			<Association Name="MamulFasonHeaderToDyeAndPrintFason" sap:content-version="1"><End Type="ZMM_005_MAMUL_SRV.MamulFasonHeader" Multiplicity="*" Role="FromRole_MamulFasonHeaderToDyeAndPrintFason"/><End Type="ZMM_005_MAMUL_SRV.DyeAndPrintFason" Multiplicity="*" Role="ToRole_MamulFasonHeaderToDyeAndPrintFason"/></Association>
+			<EntityContainer Name="ZMM_005_MAMUL_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="VhApreSpecialProcessSet" EntityType="ZMM_005_MAMUL_SRV.VhApreSpecialProcess" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhDyeCenterSpecialProcessSet" EntityType="ZMM_005_MAMUL_SRV.VhDyeCenterSpecialProcess" sap:creatable="false"
+				sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhDyeOperationSet" EntityType="ZMM_005_MAMUL_SRV.VhDyeOperation" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhHambezSet" EntityType="ZMM_005_MAMUL_SRV.VhHambez" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhClothDyeTypeSet" EntityType="ZMM_005_MAMUL_SRV.VhClothDyeType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="ApreSet" EntityType="ZMM_005_MAMUL_SRV.Apre" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="DyeSet" EntityType="ZMM_005_MAMUL_SRV.Dye" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="DyeAndPrintSet" EntityType="ZMM_005_MAMUL_SRV.DyeAndPrint" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="MamulSet" EntityType="ZMM_005_MAMUL_SRV.Mamul" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="MamulHeaderSet" EntityType="ZMM_005_MAMUL_SRV.MamulHeader" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="MamulJakarHeaderSet" EntityType="ZMM_005_MAMUL_SRV.MamulJakarHeader" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="MamulJakarSet" EntityType="ZMM_005_MAMUL_SRV.MamulJakar" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="ApreJakarSet" EntityType="ZMM_005_MAMUL_SRV.ApreJakar" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="DyeJakarSet" EntityType="ZMM_005_MAMUL_SRV.DyeJakar" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="DyeAndPrintJakarSet" EntityType="ZMM_005_MAMUL_SRV.DyeAndPrintJakar" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhReferenceMaterialSet" EntityType="ZMM_005_MAMUL_SRV.VhReferenceMaterial" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="MamulFasonHeaderSet" EntityType="ZMM_005_MAMUL_SRV.MamulFasonHeader" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="MamulFasonSet" EntityType="ZMM_005_MAMUL_SRV.MamulFason" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="DyeAndPrintFasonSet" EntityType="ZMM_005_MAMUL_SRV.DyeAndPrintFason" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+				<AssociationSet Name="MamulHeaderToMamulSet" Association="ZMM_005_MAMUL_SRV.MamulHeaderToMamul" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"><End EntitySet="MamulHeaderSet" Role="FromRole_MamulHeaderToMamul"/><End EntitySet="MamulSet" Role="ToRole_MamulHeaderToMamul"/></AssociationSet>
+				<AssociationSet Name="MamulJakarHeaderToMamulJakarSet" Association="ZMM_005_MAMUL_SRV.MamulJakarHeaderToMamulJakar" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="MamulJakarHeaderSet" Role="FromRole_MamulJakarHeaderToMamulJakar"/><End EntitySet="MamulJakarSet" Role="ToRole_MamulJakarHeaderToMamulJakar"/></AssociationSet>
+				<AssociationSet Name="MamulJakarHeaderToDyeJakarSet" Association="ZMM_005_MAMUL_SRV.MamulJakarHeaderToDyeJakar" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="MamulJakarHeaderSet" Role="FromRole_MamulJakarHeaderToDyeJakar"/><End EntitySet="DyeJakarSet" Role="ToRole_MamulJakarHeaderToDyeJakar"/></AssociationSet>
+				<AssociationSet Name="MamulJakarHeaderToApreJakarSet" Association="ZMM_005_MAMUL_SRV.MamulJakarHeaderToApreJakar" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="MamulJakarHeaderSet" Role="FromRole_MamulJakarHeaderToApreJakar"/><End EntitySet="ApreJakarSet" Role="ToRole_MamulJakarHeaderToApreJakar"/></AssociationSet>
+				<AssociationSet Name="MamulHeaderToDyeSet" Association="ZMM_005_MAMUL_SRV.MamulHeaderToDye" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"><End EntitySet="MamulHeaderSet" Role="FromRole_MamulHeaderToDye"/><End EntitySet="DyeSet" Role="ToRole_MamulHeaderToDye"/></AssociationSet>
+				<AssociationSet Name="MamulJakarHeaderToDyeJAndPrintJakarSet" Association="ZMM_005_MAMUL_SRV.MamulJakarHeaderToDyeJAndPrintJakar"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="MamulJakarHeaderSet" Role="FromRole_MamulJakarHeaderToDyeJAndPrintJakar"/><End EntitySet="DyeAndPrintJakarSet" Role="ToRole_MamulJakarHeaderToDyeJAndPrintJakar"/></AssociationSet>
+				<AssociationSet Name="MamulFasonHeaderToDyeAndPrintFasonSet" Association="ZMM_005_MAMUL_SRV.MamulFasonHeaderToDyeAndPrintFason"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="MamulFasonHeaderSet" Role="FromRole_MamulFasonHeaderToDyeAndPrintFason"/><End EntitySet="DyeAndPrintFasonSet" Role="ToRole_MamulFasonHeaderToDyeAndPrintFason"/></AssociationSet>
+				<AssociationSet Name="MamulHeaderToApreSet" Association="ZMM_005_MAMUL_SRV.MamulHeaderToApre" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"><End EntitySet="MamulHeaderSet" Role="FromRole_MamulHeaderToApre"/><End EntitySet="ApreSet" Role="ToRole_MamulHeaderToApre"/></AssociationSet>
+				<AssociationSet Name="MamulHeaderToDyeAndPrintSet" Association="ZMM_005_MAMUL_SRV.MamulHeaderToDyeAndPrint" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="MamulHeaderSet" Role="FromRole_MamulHeaderToDyeAndPrint"/><End EntitySet="DyeAndPrintSet" Role="ToRole_MamulHeaderToDyeAndPrint"/></AssociationSet>
+				<AssociationSet Name="MamulFasonHeaderToMamulFasonSet" Association="ZMM_005_MAMUL_SRV.MamulFasonHeaderToMamulFason" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="MamulFasonHeaderSet" Role="FromRole_MamulFasonHeaderToMamulFason"/><End EntitySet="MamulFasonSet" Role="ToRole_MamulFasonHeaderToMamulFason"/></AssociationSet>
+			</EntityContainer><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="http://sun.gw:443/sap/opu/odata/sap/ZMM_005_MAMUL_SRV/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version"
+				href="http://sun.gw:443/sap/opu/odata/sap/ZMM_005_MAMUL_SRV/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

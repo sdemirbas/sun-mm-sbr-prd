@@ -1,0 +1,54 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" controllerName="CreateBasekod.ZMM015F_MAMULFASON.controller.Home">
+	<Panel expandable="true" headerText="{i18n>headerText.CreateClothType}" width="auto">
+		<VBox class="sapUiSmallMargin">
+			<f:Form id="formClothDyeHeader" editable="true">
+				<f:layout>
+					<f:ResponsiveGridLayout labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0"
+						emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2" singleContainerFullSize="false"/>
+				</f:layout>
+				<f:formContainers>
+					<f:FormContainer>
+						<f:formElements>
+							<f:FormElement label="{i18n>label.OperationType}">
+								<f:fields>
+									<Input id="inputOperationType" enabled="false" value="F"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>label.OperationTypeText}">
+								<f:fields>
+									<Input id="inputOperationTypeText"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>label.OperationCode}">
+								<f:fields>
+									<Input id="inputOperationCode"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>label.OperationCodeText}">
+								<f:fields>
+									<Input id="inputOperationCodeText"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>label.YariMamulSayisi}">
+								<f:fields>
+									<Input id="inputYariMamulSayisi"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label=" {i18n>label.FasonFiyat}">
+								<f:fields>
+									<Input id="inputFiyat"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>label.FasonFiyatBirim}">
+								<f:fields>
+									<Input id="inputFiyatBirim" value="Euro"/>
+								</f:fields>
+							</f:FormElement>
+						</f:formElements>
+					</f:FormContainer>
+				</f:formContainers>
+			</f:Form>
+		</VBox>
+	</Panel>
+</core:FragmentDefinition>

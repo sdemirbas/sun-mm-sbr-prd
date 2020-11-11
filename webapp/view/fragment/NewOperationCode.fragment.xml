@@ -1,0 +1,59 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" controllerName="CreateBasekod.ZMM015F_MAMULFASON.controller.Home">
+	<Dialog>
+		<VBox class="sapUiSmallMargin">
+			<f:Form editable="true">
+				<f:layout>
+					<f:ResponsiveGridLayout labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0"
+						emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2" singleContainerFullSize="false"/>
+				</f:layout>
+				<f:formContainers>
+					<f:FormContainer>
+						<f:formElements>
+							<f:FormElement label="{i18n>label.OperationType}">
+								<f:fields>
+									<ComboBox items="{/VhOperationTypeSet}" selectedKey="{operationModel>/newOperationValues/Zzboyaopt}" showSecondaryValues="true">
+										<core:ListItem key="{Zzboyaopt}" text="{Zzboyaoptt}" additionalText="{Zzboyaopt}"/>
+									</ComboBox>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>label.OperationCode}">
+								<f:fields>
+									<Input value="{operationModel>/newOperationValues/Zzboyaopr}"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>label.OperationCodeText}">
+								<f:fields>
+									<Input value="{operationModel>/newOperationValues/Zzboyaoprt}"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>label.YariMamulSayisi}">
+								<f:fields>
+									<Input value="{operationModel>/newOperationValues/Zzyarimamulsayisi}"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label=" {i18n>label.FasonFiyat}">
+								<f:fields>
+									<Input value="{operationModel>/newOperationValues/Zzffiyat}"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>label.FasonFiyatBirim}">
+								<f:fields>
+									<ComboBox items="{/VhCurrencySet}" selectedKey="operationModel>/newOperationValues/ZzfiyatBirim" showSecondaryValues="true">
+										<core:ListItem key="{Waers}" text="{Waers}" additionalText="{Ktext}"/>
+									</ComboBox>
+								</f:fields>
+							</f:FormElement>
+						</f:formElements>
+					</f:FormContainer>
+				</f:formContainers>
+			</f:Form>
+		</VBox>
+		<beginButton>
+			<Button text="{i18n>button.Save}" press="onSaveOperationCode" type="Accept"/>
+		</beginButton>
+		<endButton>
+			<Button text="{i18n>button.Close}" press="onCloseOperationCode" type="Reject"/>
+		</endButton >
+	</Dialog>
+</core:FragmentDefinition>

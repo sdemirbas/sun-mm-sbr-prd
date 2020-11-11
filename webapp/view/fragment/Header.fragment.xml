@@ -1,0 +1,63 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" controllerName="CreateBasekod.ZMM015F_MAMULFASON.controller.Home">
+	<VBox class="sapUiSmallMargin">
+		<f:Form id="formHeader" editable="true">
+			<f:title>
+				<core:Title text="{i18n>title.FasonİscilikStokKodu}"/>
+			</f:title>
+			<f:layout>
+				<f:ResponsiveGridLayout labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0"
+					emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2" singleContainerFullSize="false"/>
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer>
+					<f:formElements>
+						<f:FormElement label="{i18n>label.ReferenceStockCode}">
+							<f:fields>
+								<Input id="inputReferenceStockCode" showValueHelp="true" valueHelpRequest="onHandleValueHelpMaterial"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label=" {i18n>label.ReferenceStockName}">
+							<f:fields>
+								<Input id="inputReferenceStockName" enabled="false"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="{i18n>label.ReferenceStockName2}">
+							<f:fields>
+								<Input id="inputReferenceStockName2" enabled="false"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="{i18n>label.MaterialStockCode}">
+							<f:fields>
+								<Input id="inputMaterialStockCode" enabled="false"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="{i18n>label.MaterialStockName}">
+							<f:fields>
+								<Input id="inputMaterialStockName" enabled="false"/>
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+				<f:FormContainer>
+					<f:formElements>
+						<f:FormElement label="{i18n>label.OperationCodeAndName}">
+							<f:fields>
+								<ComboBox id="comboBoxDyeOperation" items="{path:'/VhOperationCodesFSet', templateShareable:true}"
+									value="{operationListModel>operationName}" showSecondaryValues="true" selectionChange="onChangeComboBoxOperationName">
+									<core:ListItem key="{Zzboyaopr}" text="{Zzboyaopr}" additionalText="{Zzboyaoprt}"/>
+								</ComboBox>
+								<Text text="/"/>
+								<Text id="textOperationName">
+									<layoutData>
+										<l:GridData span="XL2 L2 M3 S4"/>
+									</layoutData>
+								</Text>
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+	</VBox>
+</core:FragmentDefinition>

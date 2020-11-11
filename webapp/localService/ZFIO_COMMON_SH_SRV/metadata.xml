@@ -1,0 +1,137 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZFIO_COMMON_SH_SRV" xml:lang="tr" sap:schema-version="1">
+			<EntityType Name="VhThreadDyeType" sap:content-version="1">
+				<Key><PropertyRef Name="Zztboyatip"/></Key><Property Name="Zztboyatip" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Tedarikçi Boya Çeşit"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Tanim" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Tedarikçi Boya Çeşit"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhThreadDyeProperty" sap:content-version="1">
+				<Key><PropertyRef Name="Zziboyatip"/></Key><Property Name="Zziboyatip" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="İplik Boya Tipi"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Tanim" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="Boya Tip Tanım"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhDyeTypeDetail" sap:content-version="1">
+				<Key><PropertyRef Name="Zziboyatipd"/></Key><Property Name="Zziboyatipd" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="İplik Boya Tip Detay"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhThreadColor" sap:content-version="1">
+				<Key><PropertyRef Name="Zziplikrenk"/></Key><Property Name="Zziplikrenk" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="İplik Renk"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Tanim" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="İplik Renk" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhSupplierColor" sap:content-version="1">
+				<Key><PropertyRef Name="Lifnr"/></Key><Property Name="Lifnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Satıcı" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zztrenkno" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="Tedarikçi Renk No"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zztboyatip" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Tedarikçi Boya Çeşit"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhKnitType" sap:content-version="1">
+				<Key><PropertyRef Name="Zzorgutip"/></Key><Property Name="Zzorgutip" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Örgü Tip" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="OrguNum" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Örgü Numarası"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Tanim" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Tanım" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhFein" sap:content-version="1">
+				<Key><PropertyRef Name="Zzfein"/></Key><Property Name="Zzfein" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Fein" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhNameCode" sap:content-version="1">
+				<Key><PropertyRef Name="Zznamekod"/></Key><Property Name="Zznamekod" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="NameKod" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Metin" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhFiberGroup" sap:content-version="1">
+				<Key><PropertyRef Name="Zzelyafkod"/></Key><Property Name="Zzelyafkod" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="Elyaf kod"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhSubcontractingGroup" sap:content-version="1">
+				<Key><PropertyRef Name="Zzfasongrup"/></Key><Property Name="Zzfasongrup" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Fason Grup"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Tanim" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Metin" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhKnitPrice" sap:content-version="1">
+				<Key><PropertyRef Name="Zzfasongrup"/></Key><Property Name="Zzfasongrup" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Fason Grup"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzorgufiyat" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:label="Örgü Fiyat"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ZzorgufiyatBirim" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Para birimi"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/></EntityType>
+			<EntityType Name="VhSerial" sap:content-version="1">
+				<Key><PropertyRef Name="Zzseri"/></Key><Property Name="Zzseri" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Seri" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Tanim" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Tanım" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhThreadNo" sap:content-version="1">
+				<Key><PropertyRef Name="Zziplikno"/></Key><Property Name="Zziplikno" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="İplik No" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zziplikdeger" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="İplik Değer"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzflamentsayi" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Flament Sayı" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Ipliknumara" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="İplik Numara Sistemi"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhThreadType" sap:content-version="1">
+				<Key><PropertyRef Name="Zzipliktipi"/></Key><Property Name="Zzipliktipi" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="İplik Tipi"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Tanim" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Tanım" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhThreadTypeDetail" sap:content-version="1">
+				<Key><PropertyRef Name="Zzipliktipidetay"/></Key><Property Name="Zzipliktipidetay" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="İplik Tipi Detay"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhFiberCode" sap:content-version="1">
+				<Key><PropertyRef Name="ElyafKodu"/></Key><Property Name="ElyafKodu" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="Elyaf kod" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ElyafKompozisyon" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="Elyaf Kompozisyon"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ElyafOzellikKod" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Elyaf Özellik Kod"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ElyafGrup" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="Elyaf Grup"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ElyafAdi" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Elyaf Adı" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ElyafAdiIng" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Elyaf Adı İng"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Aciklama" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Açıklama" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhFiberSpecialProcess" sap:content-version="1">
+				<Key><PropertyRef Name="Zzelyafozis"/></Key><Property Name="Zzelyafozis" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Elyaf Özel İşlem"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzelyafozist" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Elyaf Özel İşlem Tnm"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhThreadSpecialProcess" sap:content-version="1">
+				<Key><PropertyRef Name="Zziplikozelislem"/><PropertyRef Name="Zziplikturu"/></Key><Property Name="Zziplikozelislem" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="İplik Özel İşlem"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zziplikturu" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="İplik Türü"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Tanim" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="İplik Özel İşlem Tnm"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VhBaseCode" sap:content-version="1">
+				<Key><PropertyRef Name="Matnr"/></Key><Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Malzeme" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Maktx" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Tanım" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzseri" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Seri" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzorgutip" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Örgü Tip" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzfein" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Fein" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zznamekod" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="NameKod" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzgramaj" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Gramaj"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzkelyafgrup" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Kumaş Elyaf Grup"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzfasongrup" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Fason Grup"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzorgufiyat" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:label="Örgü Fiyat"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ZzorgufiyatBirim" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Para birimi"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/></EntityType>
+			<EntityType Name="VhRawCloth" sap:content-version="1">
+				<Key><PropertyRef Name="Matnr"/></Key><Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Malzeme" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Maktx" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Tanım" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Mtart" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Malzeme türü" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzseri" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Seri" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzorgutip" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Örgü Tip" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzfein" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Fein" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zznamekod" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="NameKod" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzgramaj" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Gramaj"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzen" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="En" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzkelyafgrup" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Kumaş Elyaf Grup"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzfasongrup" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Fason Grup"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzorgufiyat" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:label="Örgü Fiyat"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ZzorgufiyatBirim" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Para birimi"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/><Property Name="Zzrefmatnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Referans Malzeme"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzpus" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Pus" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityContainer Name="ZFIO_COMMON_SH_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="VhThreadDyeTypeSet" EntityType="ZFIO_COMMON_SH_SRV.VhThreadDyeType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhThreadDyePropertySet" EntityType="ZFIO_COMMON_SH_SRV.VhThreadDyeProperty" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhDyeTypeDetailSet" EntityType="ZFIO_COMMON_SH_SRV.VhDyeTypeDetail" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhThreadColorSet" EntityType="ZFIO_COMMON_SH_SRV.VhThreadColor" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhSupplierColorSet" EntityType="ZFIO_COMMON_SH_SRV.VhSupplierColor" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhKnitTypeSet" EntityType="ZFIO_COMMON_SH_SRV.VhKnitType" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhFeinSet" EntityType="ZFIO_COMMON_SH_SRV.VhFein" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhNameCodeSet" EntityType="ZFIO_COMMON_SH_SRV.VhNameCode" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhFiberGroupSet" EntityType="ZFIO_COMMON_SH_SRV.VhFiberGroup" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhSubcontractingGroupSet" EntityType="ZFIO_COMMON_SH_SRV.VhSubcontractingGroup" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhKnitPriceSet" EntityType="ZFIO_COMMON_SH_SRV.VhKnitPrice" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhSerialSet" EntityType="ZFIO_COMMON_SH_SRV.VhSerial" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhThreadNoSet" EntityType="ZFIO_COMMON_SH_SRV.VhThreadNo" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhThreadTypeSet" EntityType="ZFIO_COMMON_SH_SRV.VhThreadType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhThreadTypeDetailSet" EntityType="ZFIO_COMMON_SH_SRV.VhThreadTypeDetail" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhFiberCodeSet" EntityType="ZFIO_COMMON_SH_SRV.VhFiberCode" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhFiberSpecialProcessSet" EntityType="ZFIO_COMMON_SH_SRV.VhFiberSpecialProcess" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhThreadSpecialProcessSet" EntityType="ZFIO_COMMON_SH_SRV.VhThreadSpecialProcess" sap:creatable="false"
+				sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhBaseCodeSet" EntityType="ZFIO_COMMON_SH_SRV.VhBaseCode" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="VhRawClothSet" EntityType="ZFIO_COMMON_SH_SRV.VhRawCloth" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/></EntityContainer><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="http://sun.gw:443/sap/opu/odata/sap/ZFIO_COMMON_SH_SRV/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version"
+				href="http://sun.gw:443/sap/opu/odata/sap/ZFIO_COMMON_SH_SRV/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

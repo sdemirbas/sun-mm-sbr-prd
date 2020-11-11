@@ -1,0 +1,17 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	controllerName="CreateBasekod.ZMM015F_MAMULFASON.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page showHeader="false">
+		<content>
+			<core:Fragment fragmentName="CreateBasekod.ZMM015F_MAMULFASON.view.fragment.Header" type="XML"/>
+		</content>
+		<footer>
+			<OverflowToolbar id="otbFooter">
+				<Button id="buttonMessagePopover" icon="sap-icon://alert" text="{=${message>/}.length}" visible="{=${message>/}.length > 0}"
+					type="Emphasized" press="onButtonMessagePopoverPress"></Button>
+				<ToolbarSpacer/>
+				<Button icon="sap-icon://add" text="{i18n>text.AddNewOperationCode}" press="onNewOperationCode"/>
+				<Button type="Accept" text="{i18n>button.text.Save}" press="onSaveStockCode"/>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

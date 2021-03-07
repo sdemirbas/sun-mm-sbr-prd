@@ -171,6 +171,14 @@ sap.ui.define([
 		},
 		_getText: function (item) {
 			return this.byId(item).getText() ? this.byId(item).getText() : "";
+		},
+
+		/*
+		 * Clear all messages
+		 * @private
+		 */
+		_clearAllMessages: function () {
+			sap.ui.getCore().getMessageManager().removeAllMessages();
 		}
 
 	});

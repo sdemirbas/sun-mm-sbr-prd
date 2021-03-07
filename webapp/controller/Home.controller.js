@@ -11,6 +11,7 @@ sap.ui.define([
 		/* Lifecycle methods */
 		/* =========================================================== */
 		onInit: function () {
+			this._clearAllMessages();
 			this._setGlobalValues();
 			this._setTalepId();
 			this._setMessagePopover();
